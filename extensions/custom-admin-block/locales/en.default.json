@@ -1,0 +1,4 @@
+{
+  "name": "custom-admin-block",
+  "welcome": "Welcome to the {{TARGET}} extension!"
+}

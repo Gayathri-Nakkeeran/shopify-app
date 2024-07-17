@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "1a79e9b011c6ba3994bed7df6e419e65"
+name = "custom-app"
+handle = "custom-app-595"
+application_url = "https://black-living-remedies-vote.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "cedarle.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "customer_read_customers,customer_write_customers,read_customers,unauthenticated_read_customers,unauthenticated_write_customers,write_customers"
+
+[auth]
+redirect_urls = [
+  "https://black-living-remedies-vote.trycloudflare.com/auth/callback",
+  "https://black-living-remedies-vote.trycloudflare.com/auth/shopify/callback",
+  "https://black-living-remedies-vote.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false

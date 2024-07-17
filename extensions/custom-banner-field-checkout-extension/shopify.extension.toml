@@ -1,0 +1,33 @@
+# Learn more about configuring your checkout UI extension:
+# https://shopify.dev/api/checkout-extensions/checkout/configuration
+
+# The version of APIs your extension will receive. Learn more:
+# https://shopify.dev/docs/api/usage/versioning
+api_version = "2024-01"
+
+[[extensions]]
+type = "ui_extension"
+name = "custom-banner-field"
+handle = "custom-banner"
+
+[[extensions.targeting]]
+module = "./src/Checkout.jsx"
+target = "purchase.checkout.block.render"
+
+# [[extensions.metafields]]
+# namespace = "my-namespace"
+# key = "my-key"
+# [[extensions.metafields]]
+# namespace = "my-namespace"
+# key = "my-other-key"
+[extensions.capabilities]
+api_access = true
+network_access = true
+block_progress = true
+
+# [extensions.settings]
+#   [[extensions.settings.fields]]
+#   key = "banner_title"
+#   type = "single_line_text_field"
+#   name = "Banner title"
+#   description = "Enter a title for the banner"
